@@ -1,0 +1,41 @@
+Süsteemis võib mitu spordiklubi olla.
+DONE - Liikmel on ülevaade iga klubi kohta, kas liikmemaks tasutud või ei.
+DONE - Liikmel on ka ülevaade oma rahalisest seisust. See võiks olla BigDecimal.
+
+DONE - Treeningsessioonil on tasemed: ALGAJA, KESKTASE, EDASIJÕUDNUD
+Treeningsessioonid jagunevad kolmeks alamsessiooniks:
+personaaltreeningusessioon, millel on 1 koht, 1 kord maksab 30 eurot ja see saab toimuda ainult vahemikus 14.00-18.00.
+grupitreeningusessioon, millel on 25 kohta, hinda pole kuna see sisaldub liikmetasu sees, see saab toimuda vahemikus 9.00-15.00.
+veebitreeningusessioon, millel on piiramatult kohti, 1 kord maksab 5 eurot ja see võib toimuda ükskõik, mis ajal.
+DONE - Liige saab otsida treeningsessioone vastavalt tasemele, kellaajale, treeningu tüübile.
+DONE - Spordiklubi saab järjestada ka treeningsessioone vastavalt kellaajale.
+
+Spordiklubil on liikmepaketid.
+igal liikmel on pakett
+igal paketil on spordiklubi, kuhu see kuulub.
+Liikmepakette on kahte tüüpi:
+Täispakett (kuutasu 60 eurot)
+Tavapakett (kuutasu 40 eurot)
+Liikmepaketi puhul võiks kasutada Builder Patternit
+Tavapaketiga liige saab osaleda ainult treeeningsessioonidel, mille tüüp on ALGAJA või KESKTASE
+Täispaketiga on esimene personaaltreening tasuta ja iga järgnev on 20 eurot.
+
+Spordiklubil on ka boonuspunktide süsteem. Iga liige saab näha enda kogutud boonuspunktide arvu.
+Iga personaaltreeningusessiooni broneeringu eest saab täisliige 20 boonuspunkti ja tavaliige 10 boonuspunkti.
+Iga grupitreeningusessiooni broneeringu eest saab täisliige 4 boonuspunkti ja tavaliige 2 boonuspunkti.
+Iga veebitreeningusessiooni broneeringu eest saab täisliige 8 boonuspunkti ja tavaliige 4 boonuspunkti.
+
+Treeningsessioonile(personaal,veebi) registeerides on võimalik kasutada ka boonuspunkte soodustuse saamiseks aga see pole kohustuslik.
+Täisliige saab iga boonuspunkti kohta 10 senti soodustust treeningu broneerimisel.
+Tavaliige saab iga boonuspunkti kohta 5 senti soodustust treeningu broneerimisel.
+Liige saab personaaltreeningusessiooni ja veebitreeningusessiooni broneerida juhul, kui tal on piisavalt raha (ja vajadusel piisavalt boonuspunkte).
+Peale broneerimist peab liikme kontolt maha lahutama vastava koguse raha ja boonuspunkte.
+
+
+TODO
+Make workflow to populate membership overview.
+Member -> buyMembership() ->
+
+Siin toome välja mõned märksõnad, mida võib süsteem kasutada. Võib ka mingeid muid termineid nende asemel kasutada. Aga need võiks siis selgelt mõistetavad olla.
+Liikmepakett - membership
+Boonuspunktid- bonus points

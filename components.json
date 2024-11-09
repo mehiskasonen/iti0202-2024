@@ -1,0 +1,10 @@
+{
+  "id": 2,
+  "name": "component name3",
+  "type": "RAM",
+  "price": 80.0,
+  "amount": 1,
+  "manufacturer": "Corsair",
+  "performancePoints": 4,
+  "powerConsumption": 1
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-04-11T07:18:50.795801Z</date>
+  <millis>1712819930795</millis>
+  <nanos>801000</nanos>
+  <sequence>123</sequence>
+  <logger>ee.taltech.iti0202.travelagency.agency.TravelAgency</logger>
+  <level>INFO</level>
+  <class>ee.taltech.iti0202.travelagency.agency.TravelAgency</class>
+  <method>updateClientTravelPacketMap</method>
+  <thread>1</thread>
+  <message>ee.taltech.iti0202.travelagency.client.ClientBuilder@384ad17b and ee.taltech.iti0202.travelagency.agency.TravelPacket@61862a7f was added to client travel packet map</message>
+</record>
+<record>
+  <date>2024-04-11T07:18:50.852177Z</date>
+  <millis>1712819930852</millis>
+  <nanos>177000</nanos>
+  <sequence>137</sequence>
+  <logger>ee.taltech.iti0202.travelagency.agency.TravelAgency</logger>
+  <level>INFO</level>
+  <class>ee.taltech.iti0202.travelagency.agency.TravelAgency</class>
+  <method>updateClientTravelPacketMap</method>
+  <thread>1</thread>
+  <message>ee.taltech.iti0202.travelagency.client.ClientBuilder@14dd9eb7 and ee.taltech.iti0202.travelagency.agency.TravelPacket@52e6fdee was added to client travel packet map</message>
+</record>
+</log>

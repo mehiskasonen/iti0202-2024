@@ -1,0 +1,4 @@
+{"components":{"0":{"id":0,"name":"component name","type":"FAN","price":100.0,
+"amount":1,"manufacturer":"Corsair","performancePoints":5,"powerConsumption":3},
+"1":{"id":1,"name":"component name 2","type":"CPU","price":35.0,"amount":1,
+"manufacturer":"AMD","performancePoints":200,"powerConsumption":100}}}

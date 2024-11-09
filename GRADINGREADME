@@ -1,0 +1,84 @@
+Kuidas hindad koodi struktuuri? Võiks arvesse võtta järgmisi komponente:
+
+Reisipakett ja kliendi tüüp on lahendatud klassidega, milles enumid, seega on lisamine kerge.
+Üldiselt kood järgib SOLID-i S ja O printsiipi. Travelpackage (discount) meetod eirab SOLID-i S printsiipi.
+Meetodit saaks refaktoreerida.
+
+Reisipaketi ostmine toimub korrektselt. Tegevused ostuprotsessis on õiges järejekorras.
+Soodustuse arvutamine võiks olla nt agentuuri klassi all. Hetkel paketi klassis.
+
+Logimine on realiseeritud aga kasutatakse kahte erinevat loggeri instantsi.
+Erindeid on kasutatud jooksvalt koodi sees.
+
+
+
+Testide hindamine. Testid tuleks käima panna ja vaadata code coverage (nii koodiridade kui ka meetodite oma).
+
+iti0202 Method 100% (56/56), Line 97% (178/182)
+Testid on nime ja sisu poolest arusaadavad. Peamised asjad on testitud. Põhilisest struktuurist saab aru.
+Palju on selliseid teste, kus on 4-5 'assertEquals' võrdlust.
+
+
+
+Too välja mõned positiivsed asjad, mis selles lahenduses silma jäid.
+
+Testid test sources root kaustas.
+Konstuktorite valideerimine.
+Paketi konstruktorisse on antud Set paketi tüüpidest, mitte üksik enum.
+
+
+
+
+Testid test sources root kaustas.
+Hästi struktureeritud pakettide järgi
+Kokku 49 testi
+
+Üks test võiks testida ühte asja. Hetkel nt:
+
+void testBuyTripSufficientBudget() {
+        client.buyTrip(travelPackage, travelAgency);
+        assertEquals(ClientType.Status.BASIC, client.getStatus());
+        assertEquals(950, client.getBudget());
+        assertTrue(client.getVisited().contains(travelPackage));
+        assertEquals(ClientType.Status.BASIC, client.getStatus());
+    }
+
+
+
+Meeldis konstruktorite valideerimine, muidugi sellel ei ole int väärtuse pikkusega midagi tegemist:
+
+if (idCode <= 5) {
+    logger.warning("IdCode is not long enough.");
+
+Travelpackage (discount) ja getTopClients() meetod eirab natukene SOLID-i S printsiipi. Koodi saaks restruktureerida.
+Nt selgitada välja reisi pikkus ja siis teha eraldi meetodisse kust saab discounti.
+Discount'i arvutamine TravelPackage klassis koodi struktureerimise mõistes, ei ole kõige parem variant.
+
+
+Kasutad TravelPackage klassis sellist meetodit:
+public void setPurchaseCount(int num) {
+    purchaseCount = num;
+}
+
+ja inkrementeerid Client klassis nii (rida 143, 144):
+
+visitedCounter++;
+travelPackage.setPurchaseCount(+1);
+
+See tähendab, et alati kui ostab uue paketi, siis väärtus seatakse üheks ja inkrementeeritakse ühe võrra,
+ehk väärtus ei saa kunagi buyTrip() meetodiga suuremaks kui 2. Kui oleks selline test, siis ei õnnestuks:
+
+@Test
+void testPackagePurchasing() {
+    client.buyTrip(travelPackage, travelAgency);
+    client.buyTrip(travelPackage, travelAgency);
+    client.buyTrip(travelPackage, travelAgency);
+    client.buyTrip(travelPackage, travelAgency);
+    assertEquals(4, travelPackage.getPurchaseCount());
+}
+Expected :4
+Actual   :2
+
+
+TravelAgency listi klientidest ei kasutata. Sinna lisad ainult kliente addClient funktsiooniga.
+addClient ja getClients funktsioone on kasutatud aga ainult testimisel.

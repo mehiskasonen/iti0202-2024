@@ -1,0 +1,167 @@
+[
+  {
+    "students": [
+      {
+        "id": 1,
+        "name": "Dominik Vettik",
+        "grades": [
+          {
+            "grade": 5,
+            "assignment": "Aine1"
+          },
+          {
+            "grade": 3,
+            "assignment": "Aine2"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Ago Luberg",
+        "grades": [
+          {
+            "grade": 5,
+            "assignment": "Aine3"
+          },
+          {
+            "grade": 5,
+            "assignment": "Aine4"
+          }
+        ]
+      }
+    ],
+    "name": "TalTech"
+  },
+  {
+    "students": [
+      {
+        "id": 3,
+        "name": "Mati Mets",
+        "grades": [
+          {
+            "grade": 4,
+            "assignment": "Aine5"
+          },
+          {
+            "grade": 3,
+            "assignment": "Aine6"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Karmen Tamm",
+        "grades": [
+          {
+            "grade": 3,
+            "assignment": "Aine7"
+          },
+          {
+            "grade": 2,
+            "assignment": "Aine8"
+          }
+        ]
+      }
+    ],
+    "name": "TKTK"
+  },
+  {
+    "students": [
+      {
+        "id": 5,
+        "name": "Matti Mustonen",
+        "grades": [
+          {
+            "grade": 2,
+            "assignment": "Aine9"
+          },
+          {
+            "grade": 5,
+            "assignment": "Aine1"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Renee Uueni",
+        "grades": [
+          {
+            "grade": 5,
+            "assignment": "Aine2"
+          },
+          {
+            "grade": 1,
+            "assignment": "Aine3"
+          }
+        ]
+      }
+    ],
+    "name": "Tartu ylikool"
+  },
+  {
+    "students": [
+      {
+        "id": 7,
+        "name": "Renee Uueni",
+        "grades": [
+          {
+            "grade": 2,
+            "assignment": "Aine4"
+          },
+          {
+            "grade": 3,
+            "assignment": "Aine5"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Anna Ritson",
+        "grades": [
+          {
+            "grade": 4,
+            "assignment": "Aine6"
+          },
+          {
+            "grade": 4,
+            "assignment": "Aine7"
+          }
+        ]
+      }
+    ],
+    "name": "Eesti Maaylikool"
+  },
+  {
+    "students": [
+      {
+        "id": 9,
+        "name": "Anneli Vahkal",
+        "grades": [
+          {
+            "grade": 3,
+            "assignment": "Aine8"
+          },
+          {
+            "grade": 3,
+            "assignment": "Aine9"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Maiu Vahesalu",
+        "grades": [
+          {
+            "grade": 1,
+            "assignment": "Aine1"
+          },
+          {
+            "grade": 1,
+            "assignment": "Aine2"
+          }
+        ]
+      }
+    ],
+    "name": "Luua Metsanduskool"
+  }
+]

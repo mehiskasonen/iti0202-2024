@@ -1,0 +1,31 @@
+Järjestamine:
+
+Loo meetod, mille alusel saab järjestada treeningsessioone vastavalt tüübile (ALGAJA, KESKTASE; EDASIJÕUDNUD).
+Kui tase on sama, siis tuleb järjestada treeningsessioonid osalejate arvu järgi.
+Kui osalejate arv on ka sama, siis tuleb järjestada treeningsessioonid aja järgi.
+
+Loo meetod, mille alusel saab järjestada treenereid nende spetsialiseerumiste arvu järgi.
+Kui spetsialiseerumiste arv on sama, siis tuleb järjestada liikmete arvu järgi, kes on registreerinud ennast nende treeningsessioonidele.
+Kui see on ka sama, siis tuleb järjestada treeneri eesnime järgi tähestikulises järjekorras.
+
+
+Strateegia:
+Loo strateegiad, mille alusel saab spordiklubi liikmetele kuutasu soodustust määrata.
+Strateegia 1 arvestab liikme osalemisi treeningsessioonides.
+Kui liikme osalemiste arv treeningsessioonides on üle keskmise, siis saab ta vastava protsendi soodustust järgmise kuumaksu tasumisel. Maksimaalne soodustus on 60%.
+Strateegia 2 arvestab liikme kogutud boonuspunkte.
+Kui liikme boonuspunktide arv ületab keskmist boonuspunktide arvu, siis ta saab vastavalt igale ületatud boonuspunktile 0.25% soodustust järgmisele kuumaksele. Maksimaalne soodustus on 20%.
+Strateegia 3 arvestab kaks eelmist strateegiat kokku ja lisaks arvestab juurde selle, mitmes erinevas treeningtüübis (spordialas) liige on osalenud:
+Kui liige on osa võtnud kuni kolmest erinevast spordialast, siis ta saab soodust 5%.
+Kui liige on osa võtnud rohkem kui kolmest erinevast spordialast, siis ta saab soodust 10%.
+Maksimaalne soodustus kokku on 90%.
+
+
+Kuupäevade kasutus:
+Liige saab otsida treeningsessioone lisaks kellajale ka nädalapäeva järgi ja kuupäevade vahemiku järgi.
+Objektide kaitsmine muutmise eest
+Muutke vajadusel oma koodi selliselt, et konstruktoris, getteris vm ei oleks võimalik kasutada/saada objekte, mille hilisem muutmine muudab teie objektis kasutatud olekuid.
+Selle kohta võib otsida "defensive copy", näiteks: https://dev.to/kylec32/effective-java-make-defensive-copies-when-necessary-4bd6
+
+3. osa terminid
+Soodustus - discount
